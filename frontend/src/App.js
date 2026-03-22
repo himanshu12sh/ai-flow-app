@@ -99,7 +99,7 @@ function App() {
     setSaveStatus('');
     updateResult('Thinking...');
     try {
-      const res = await axios.post('http://localhost:5000/api/ask-ai', { prompt: inputValue });
+      const res = await axios.post('https://ai-flow-ap.onrender.com/api/ask-ai', { prompt: inputValue });
       updateResult(res.data.response);
     } catch {
       updateResult('Error: Could not get a response. Is the backend running?');
@@ -120,7 +120,7 @@ function App() {
     }
     try {
       setSaveStatus('Saving...');
-      await axios.post('http://localhost:5000/api/save', {
+      await axios.post('https://ai-flow-ap.onrender.com/api/save', {
         prompt: inputValue,
         response: resultValue,
       });

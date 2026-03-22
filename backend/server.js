@@ -5,7 +5,13 @@ const axios = require("axios");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://ai-app-flow.netlify.app",
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 mongoose
@@ -38,7 +44,7 @@ model: 'openrouter/free',
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost:3000", 
+          // "HTTP-Referer": "http://localhost:3000", 
           "X-Title": "AI Flow App",
         },
       },

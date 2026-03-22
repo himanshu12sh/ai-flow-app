@@ -9,7 +9,7 @@ function StorePage() {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/latest-message');
+        const res = await axios.get('https://ai-flow-ap.onrender.com/api/latest-message');
         setBanner(res.data.message);
         setLastUpdated(new Date().toLocaleTimeString());
       } catch {
