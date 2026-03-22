@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #1a1a2e;
+  border-bottom: 1px solid #333;
+  z-index: 10;
+}
+
+.app-title {
+  color: #e0e0ff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-run {
+  background: #4f46e5;
+  color: white;
+}
+
+.btn-run:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.btn-save {
+  background: #059669;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #047857;
+}
+
+.save-status {
+  color: #6ee7b7;
+  font-size: 13px;
+}
+
+.flow-node {
+  background: white;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  padding: 14px;
+  min-width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.input-node {
+  border-color: #4f46e5;
+}
+
+.result-node {
+  border-color: #059669;
+  max-width: 320px;
+}
+
+.node-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.node-textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.node-textarea:focus {
+  border-color: #4f46e5;
+}
+
+.node-result {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+}
